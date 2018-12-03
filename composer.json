@@ -2,7 +2,6 @@
     "name": "joune90/yii2-sms",
     "description": "Yii2 SMS extension",
     "type": "yii2-sxtension",
-    "license": "BSD_3-Clause",
     "authors": [
         {
             "name": "joune90",
