@@ -1,5 +1,5 @@
 {
-    "name": "joune90/yii2-sms",
+    "name": "yiisoft/yii2-sms",
     "description": "Yii2 SMS extension",
     "keywords": ["yii2", "extension", "sms", "smser", "plugin"],
     "type": "yii2-extension",
