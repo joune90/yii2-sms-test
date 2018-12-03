@@ -10,7 +10,7 @@ use yii\helpers\FileHelper;
  *
  * @author Cosmo <daixianceng@gmail.com>
  */
-abstract class Smser extends \yii\base\Component
+abstract class sms extends \yii\base\Component
 {
     /**
      * 请求地址
@@ -102,7 +102,7 @@ abstract class Smser extends \yii\base\Component
      */
     private function _sendAsFile($mobile, $content)
     {
-        $dir = Yii::getAlias('@app/runtime/smser');
+        $dir = Yii::getAlias('@app/runtime/sms');
         
         try {
             if (!FileHelper::createDirectory($dir)) {

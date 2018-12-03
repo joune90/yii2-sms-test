@@ -1,7 +1,7 @@
 {
     "name": "joune90/yii2-sms",
     "description": "Yii2 SMS extension",
-    "keywords": ["yii2", "extension", "sms", "smser", "plugin"],
+    "keywords": ["yii2", "extension", "sms", "sms", "plugin"],
     "type": "yii2-extension",
     "license": "BSD-3-Clause",
     "authors": [

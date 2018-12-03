@@ -1,6 +1,6 @@
 <?php
 
-namespace daixianceng\smser;
+namespace daixianceng\sms;
 
 use yii\base\InvalidConfigException;
 use yii\base\NotSupportedException;
@@ -13,7 +13,7 @@ use yii\base\NotSupportedException;
  * @property string $state read-only state
  * @property string $message read-only message
  */
-class LuosimaoSmser extends Smser
+class Luosimaosms extends sms
 {
     /**
      * @inheritdoc

@@ -17,7 +17,7 @@ use yii\base\NotSupportedException;
  * @property string $state read-only state
  * @property string $message read-only message
  */
-class Chuanglan extends Smser
+class Chuanglan extends sms
 {
     /**
      * @inheritdoc

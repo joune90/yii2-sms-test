@@ -36,7 +36,7 @@ return [
     'components' => [
         'sms' => [
             // 中国云信
-            'class' => 'joune90\sms\CloudSmser',
+            'class' => 'joune90\sms\Cloudsms',
             'username' => 'username',
             'password' => 'password',
             'fileMode' => false
