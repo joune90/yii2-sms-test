@@ -1,13 +1,13 @@
 <?php
 
-namespace daixianceng\sms;
+namespace joune90\sms;
 
 use yii\base\NotSupportedException;
 
 /**
  * 中国网建
  * 
- * @author Cosmo <daixianceng@gmail.com>
+ * @author Cosmo <joune90@gmail.com>
  * @property string $password write-only password
  * @property string $state read-only state
  * @property string $message read-only message

@@ -8,7 +8,7 @@ use yii\helpers\FileHelper;
 /**
  * 短信发送基类
  *
- * @author Cosmo <daixianceng@gmail.com>
+ * @author Cosmo <joune90@gmail.com>
  */
 abstract class sms extends \yii\base\Component
 {

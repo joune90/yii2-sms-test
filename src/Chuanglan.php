@@ -12,7 +12,7 @@ use yii\base\NotSupportedException;
 /**
  * 创蓝短信平台
  *
- * @author Cosmo <daixianceng@gmail.com>
+ * @author Cosmo <joune90@gmail.com>
  * @property string $password write-only password
  * @property string $state read-only state
  * @property string $message read-only message
