@@ -1,68 +1,62 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Administrator
- * Date: 2018/11/30
- * Time: 14:32
- */
+
 namespace joune90\sms;
+
 use yii\base\InvalidConfigException;
 use yii\base\NotSupportedException;
 
 /**
- * 创蓝短信平台
- *
+ * 中国云信
+ * 
  * @author Cosmo <joune90@gmail.com>
  * @property string $password write-only password
  * @property string $state read-only state
  * @property string $message read-only message
  */
-class Chuanglan extends sms
+class CloudSms extends Sms
 {
     /**
      * @inheritdoc
      */
-    public $url = 'http://sapi.253.com/msg/HttpBatchSendSM';
-
+    public $url = 'http://api.sms.cn/mtutf8/';
+    
     /**
      * @inheritdoc
      */
     public function send($mobile, $content)
     {
-//        if (parent::send($mobile, $content)) {
-//            return true;
-//        }
-
+        if (parent::send($mobile, $content)) {
+            return true;
+        }
+        
         $data = [
-            'account' => $this->username,
-            'pswd' => $this->password,
+            'uid' => $this->username,
+            'pwd' => $this->password,
             'mobile' => $mobile,
-            'msg' => $content
+            'content' => $content
         ];
-
-
+        
         $ch = curl_init();
         curl_setopt($ch, CURLOPT_URL, $this->url);
         curl_setopt($ch, CURLOPT_POST, true);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
         curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($data));
-
+        
         $result = curl_exec($ch);
         curl_close($ch);
-
+        
         $resultArr = [];
         parse_str($result, $resultArr);
-
-
+        
         $this->state = isset($resultArr['stat']) ? (string) $resultArr['stat'] : null;
         $this->message = isset($resultArr['message']) ? (string) $resultArr['message'] : null;
-
+        
         return $this->state === '100';
     }
-
+    
     /**
      * 设置密码
-     *
+     * 
      * @param string $password
      * @throws InvalidConfigException
      */
@@ -71,10 +65,10 @@ class Chuanglan extends sms
         if ($this->username === null) {
             throw new InvalidConfigException('用户名不能为空');
         }
-
-        $this->password = $password;
+        
+        $this->password = md5($password . $this->username);
     }
-
+    
     /**
      * @inheritdoc
      */

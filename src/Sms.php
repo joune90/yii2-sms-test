@@ -10,7 +10,7 @@ use yii\helpers\FileHelper;
  *
  * @author Cosmo <joune90@gmail.com>
  */
-abstract class sms extends \yii\base\Component
+abstract class Sms extends \yii\base\Component
 {
     /**
      * 请求地址

@@ -12,7 +12,7 @@ use yii\base\NotSupportedException;
  * @property string $state read-only state
  * @property string $message read-only message
  */
-class Sxtsms extends sms
+class SxtSms extends Sms
 {
     /**
      * @inheritdoc

@@ -11,7 +11,7 @@ use yii\base\NotSupportedException;
  * @property string $state read-only state
  * @property string $message read-only message
  */
-class Yunpiansms extends sms
+class YunpianSms extends Sms
 {
     /**
      * @var string

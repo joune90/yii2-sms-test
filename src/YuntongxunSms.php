@@ -12,7 +12,7 @@ use yii\base\NotSupportedException;
  * @property string $state read-only state
  * @property string $message read-only message
  */
-class Yuntongxunsms extends sms
+class YuntongxunSms extends Sms
 {
     /**
      * @var string
